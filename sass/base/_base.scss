@@ -1,0 +1,64 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  margin: 0;
+}
+
+// .container {
+//   width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 15px;
+// }
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+* {
+  box-sizing: border-box;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+// *:hover,
+// *:focus {
+//   transition: cubic-bezier(0.4, 0, 0.2, 1);
+//   transition-duration: 250ms;
+// } 
+* {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}

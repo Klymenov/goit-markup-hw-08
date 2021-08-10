@@ -1,0 +1,79 @@
+/*hero section*/
+
+.hero {
+    background-color: #2F303A;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: rgba(47, 48, 58, 0.4);
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
+.hero__content {
+    width: 100%;
+    margin: 0 auto;
+}
+.hero__button {
+    display: block;
+    background-color: #2196F3;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    padding: 0px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        background: #188CE8;
+        cursor: pointer;
+    }
+}
+.hero__heading {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    // margin: 0 45px 30px;
+}
+
+@media screen and (min-width: 480px) {
+    .hero__heading {
+        margin: 0 45px 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero__heading {
+        margin: 0 189px 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero__heading {
+        font-size: 44px;
+        line-height: 60px;
+        margin: 0 237px 30px;
+    }
+}
+
+
+.overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../img/background/background-hero.jpg); 
+    background-size: cover;
+    background-position: center;
+}

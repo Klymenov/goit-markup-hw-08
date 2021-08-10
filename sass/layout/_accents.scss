@@ -1,0 +1,125 @@
+
+.accents-section {
+    background-color: white;
+}
+
+@media screen and (min-width: 1200px) {
+    .accents-section {
+        padding-top: 94px;
+        padding-bottom: 0;
+    }
+}
+
+.accents-list {
+    width: 100%;
+    // display: flex;
+    // padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .accents-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.details::before {
+    background-image: url(../img/svg/antenna.svg);
+}
+.punctuality::before {
+    background-image: url(../img/svg/clock.svg);
+}
+.planning::before {
+    background-image: url(../img/svg/diagram.svg);
+}
+.technologies::before {
+    background-image: url(../img/svg/astronaut.svg);
+}
+.accents-element {
+    // flex-basis: calc(100% / 4);
+    // display: inline-block;
+    // margin-left: 30px;
+
+    // &:first-child {
+    //     margin-left: 0px;
+    // }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 120px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+        margin-bottom: 30px; 
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .accents-element {
+        // margin-left: 30px;
+        margin-bottom: 30px;
+
+        // &:nth-child(odd) {
+        //     margin-left: 0;
+        // }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .accents-element {
+        max-width: 354px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+
+        &:nth-child(odd) {
+            margin-left: 0;
+        }
+
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .accents-element {
+        max-width: 270px;
+        flex-basis: calc(100% / 4 -15px);
+        margin-left: 30px;
+        margin-bottom: 0;
+
+        &:nth-child(odd) {
+            margin-left: 30px;
+        }
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
+
+.accents-heading {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.accents-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin: 0px;
+}
