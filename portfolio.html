@@ -15,30 +15,64 @@
 
     <!--header-section-->
 
-    <header class="header-section">
+    <header class="header">
         <div class="container header-content">
-            <nav class="navigation">
-                <a class="logo" href="./index.html">Web<span class="header-studio">Studio</span></a>
-                <ul class="nav-list">
-                    <li class="nav-element">
-                        <a class="nav-link" href="./index.html">Студия</a>
+            <nav class="header__nav">
+                <a class="logo" href="./index.html">Web<span class="logo__header-studio">Studio</span></a>
+                <ul class="header__nav-list">
+                    <li class="header__nav-element ">
+                        <a class="header__nav-link" href="./index.html">Студия</a>
                     </li>
-                    <li class="nav-element portfolio-header-border">
-                        <a class="nav-link" href="./portfolio.html"><span class="header-portfolio-style">Портфолио</span></a>
+                    <li class="header__nav-element studio-header-border">
+                        <a class="header__nav-link" href="./portfolio.html"><span class="header-studio-style">Портфолио</span></a>
                     </li>
-                    <li class="nav-element">
-                        <a class="nav-link" href="mailto:info@devstudio.com">Контакты</a>
+                    <li class="header__nav-element">
+                        <a class="header__nav-link" href="mailto:info@devstudio.com">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
-            <ul class="contact-list">
-                <li class="contact-element"><a class="contact-link" href="mailto:info@devstudio.com"><svg class="contact-icon" width=16px height=12px><use href="./img/svg/icons/symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
+            <button class="burger-button" data-menu-open>
+                <svg class="burger-button__icon">
+                    <use href="./img/svg/icons/symbol-defs.svg#icon-burger"></use>
+                </svg>
+            </button>
+
+            <ul class="header__contact-list">
+                <li class="header__contact-element "><a class="header__contact-link" href="mailto:info@devstudio.com"><svg class="header__contact-icon" width=16px height=12px><use href="./img/svg/icons/symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
                 </li>
-                <li class="contact-element"><a class="contact-link" href="tel:+380961111111"><svg class="contact-icon" width=10px height=16px><use href="./img/svg/icons/symbol-defs.svg#icon-header-phone"></use></svg>+38 096 111 11 11</a>
+                <li class="header__contact-element"><a class="header__contact-link" href="tel:+380961111111"><svg class="header__contact-icon" width=10px height=16px><use href="./img/svg/icons/symbol-defs.svg#icon-header-phone"></use></svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button type="button" class="mobile-close-menu" data-menu-close>
+                    <svg class="mobile-close-icon">
+                        <use href="./img/svg/icons/symbol-defs.svg#icon-modal-close"></use>
+                    </svg>
+                </button>
+                <ul class="mobile__nav-list">
+                    <li class="mobile__nav-element"><a href="./index.html" class="mobile__nav-link mobile__studio-link">Студия</a></li>
+                    <li class="mobile__nav-element"><a href="./portfolio.html" class="mobile__nav-link">Портфолио</a></li>
+                    <li class="mobile__nav-element"><a href="#" class="mobile__nav-link">Контакты</a></li>
+                </ul>
+
+                <ul class="mobile__contact-list">
+                    <li class="mobile__contact-element"><a href="#" class="mobile__contact-link mobile__mail">+38 096 111 11 11</a></li>
+                    <li class="mobile__contact-element"><a href="#" class="mobile__contact-link mobile__tel">info@devstudio.com</a></li>
+                </ul>
+
+                <ul class="mobile__social-list">
+                    <li class="mobile__social-element"><a href="#" class="mobile__social-link">Instagram</a></li>
+                    <li class="mobile__social-element"><a href="#" class="mobile__social-link">Twitter</a></li>
+                    <li class="mobile__social-element"><a href="#" class="mobile__social-link">Facebook</a></li>
+                    <li class="mobile__social-element"><a href="#" class="mobile__social-link">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
     <!--main-section-->
@@ -61,7 +95,18 @@
                         <li class="card-element">
                             <a href="./index.html" class="card-link">
                                 <div class="team-list-img">
-                                    <img class="card-img" src="./img/portfolio/tehnokryak.png" width="370" height="294" alt="Технокряк">
+                                    <picture class="picture">
+                                        <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/tehnokryak.webp 1x, ./img/desctop/portfolio/tehnokryak@2x.webp 2x" type="image/webp">
+                                        <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/tehnokryak.png 1x, ./img/desctop/portfolio/tehnokryak@2x.png 2x">
+        
+                                        <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img.webp 1x, ./img/tablet/tabletfolio/img@2x.webp 2x" type="image/webp">
+                                        <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img.jpg 1x, ./img/tablet/tabletteam/img@2x.jpg 2x">
+        
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img.webp 1x, ./img/mobile/portfolio/img@2x.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img.jpg 1x, ./img/mobile/portfolio/img@2x.jpg 2x">
+                                        <img src="#" alt="img">
+                                    </picture>
+                                    <!-- <img class="card-img" src="./img/portfolio/tehnokryak.png" width="370" height="294" alt="Технокряк"> -->
                                     <p class="card-overlay">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                                 </div>
                                 <div class="card-text">
@@ -71,56 +116,144 @@
                             </a>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/poster.png" width="370" height="294" alt="Постер New Orlean vs Golden Star">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/poster.webp 1x, ./img/desctop/portfolio/poster@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/poster.png 1x, ./img/desctop/portfolio/poster@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-1.webp 1x, ./img/tablet/tabletfolio/img@2x-1.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-1.jpg 1x, ./img/tablet/tabletteam/img@2x-1.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-1.webp 1x, ./img/mobile/portfolio/img@2x-1.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-1.jpg 1x, ./img/mobile/portfolio/img@2x-1.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/poster.png" width="370" height="294" alt="Постер New Orlean vs Golden Star"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Постер New Orlean vs Golden Star</h4>
                                 <p class="card-p">Дизайн</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/restaurant.png" width="370" height="294" alt="Ресторан Seafood">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/restaurant.webp 1x, ./img/desctop/portfolio/restaurant@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/restaurant.png 1x, ./img/desctop/portfolio/restaurant@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-2.webp 1x, ./img/tablet/tabletfolio/img@2x-2.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-2.jpg 1x, ./img/tablet/tabletteam/img@2x-2.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-2.webp 1x, ./img/mobile/portfolio/img@2x-2.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-2.jpg 1x, ./img/mobile/portfolio/img@2x-2.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/restaurant.png" width="370" height="294" alt="Ресторан Seafood"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Ресторан Seafood</h4>
                                 <p class="card-p">Приложение</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/projectprime.png" width="370" height="294" alt="Проект Prime">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectprime.webp 1x, ./img/desctop/portfolio/projectprime@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectprime.png 1x, ./img/desctop/portfolio/projectprime@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-3.webp 1x, ./img/tablet/tabletfolio/img@2x-3.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-3.jpg 1x, ./img/tablet/tabletteam/img@2x-3.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-3.webp 1x, ./img/mobile/portfolio/img@2x-3.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-3.jpg 1x, ./img/mobile/portfolio/img@2x-3.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/projectprime.png" width="370" height="294" alt="Проект Prime"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Проект Prime</h4>
                                 <p class="card-p">Маркетинг</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/projectboxes.png" width="370" height="294" alt="Проект Boxes">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectboxes.webp 1x, ./img/desctop/portfolio/projectboxes@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectboxes.png 1x, ./img/desctop/portfolio/projectboxes@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-4.webp 1x, ./img/tablet/tabletfolio/img@2x-4.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-4.jpg 1x, ./img/tablet/tabletteam/img@2x-4.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-4.webp 1x, ./img/mobile/portfolio/img@2x-4.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-4.jpg 1x, ./img/mobile/portfolio/img@2x-4.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/projectboxes.png" width="370" height="294" alt="Проект Boxes"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Проект Boxes</h4>
                                 <p class="card-p">Приложение</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/inspiration.png" width="370" height="294" alt="Inspiration has no Borders">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/inspiration.webp 1x, ./img/desctop/portfolio/inspiration@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/inspiration.png 1x, ./img/desctop/portfolio/inspiration@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-5.webp 1x, ./img/tablet/tabletfolio/img@2x-5.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-5.jpg 1x, ./img/tablet/tabletteam/img@2x-5.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-5.webp 1x, ./img/mobile/portfolio/img@2x-5.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-5.jpg 1x, ./img/mobile/portfolio/img@2x-5.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/inspiration.png" width="370" height="294" alt="Inspiration has no Borders"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Inspiration has no Borders</h4>
                                 <p class="card-p">Веб-сайт</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/limitededition.png" width="370" height="294" alt="Издание Limited Edition">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/limitededition.webp 1x, ./img/desctop/portfolio/limitededition@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/limitededition.png 1x, ./img/desctop/portfolio/limitededition@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-6.webp 1x, ./img/tablet/tabletfolio/img@2x-6.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-6.jpg 1x, ./img/tablet/tabletteam/img@2x-6.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-6.webp 1x, ./img/mobile/portfolio/img@2x-6.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-6.jpg 1x, ./img/mobile/portfolio/img@2x-6.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/limitededition.png" width="370" height="294" alt="Издание Limited Edition"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Издание Limited Edition</h4>
                                 <p class="card-p">Дизайн</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/projectlab.png" width="370" height="294" alt="Проект LAB">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectlab.webp 1x, ./img/desctop/portfolio/projectlab@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/projectlab.png 1x, ./img/desctop/portfolio/projectlab@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-7.webp 1x, ./img/tablet/tabletfolio/img@2x-7.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-7.jpg 1x, ./img/tablet/tabletteam/img@2x-7.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-7.webp 1x, ./img/mobile/portfolio/img@2x-7.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-7.jpg 1x, ./img/mobile/portfolio/img@2x-7.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/projectlab.png" width="370" height="294" alt="Проект LAB"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Проект LAB</h4>
                                 <p class="card-p">Веб-сайт</p>
                             </div>
                         </li>
                         <li class="card-element">
-                            <img class="card-img" src="./img/portfolio/grovingbusiness.png" width="370" height="294" alt="Growing Business">
+                            <picture class="picture">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/grovingbusiness.webp 1x, ./img/desctop/portfolio/grovingbusiness@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)" srcset="./img/desctop/portfolio/grovingbusiness.png 1x, ./img/desctop/portfolio/grovingbusiness@2x.png 2x">
+
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletfolio/img-8.webp 1x, ./img/tablet/tabletfolio/img@2x-8.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="./img/tablet/tabletteam/img-8.jpg 1x, ./img/tablet/tabletteam/img@2x-8.jpg 2x">
+
+                                <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-8.webp 1x, ./img/mobile/portfolio/img@2x-8.webp 2x" type="image/webp">
+                                        <source media="(min-width: 480px)" srcset="./img/mobile/portfolio/img-8.jpg 1x, ./img/mobile/portfolio/img@2x-8.jpg 2x">
+                                <img src="#" alt="img">
+                            </picture>
+                            <!-- <img class="card-img" src="./img/portfolio/grovingbusiness.png" width="370" height="294" alt="Growing Business"> -->
                             <div class="card-text">
                                 <h4 class="card-heading">Growing Business</h4>
                                 <p class="card-p">Приложение</p>
@@ -135,8 +268,9 @@
 
     <!--footer-section-->
     
-    <footer class="footer-section">
+    <footer class="section footer-section">
         <div class="container footer-container">
+            <div class="footer-nav-section">
                 <div class="footer-nav">
                     <a class="footer-logo"  href="./index.html">Web<span class="footer-studio">Studio</span></a>
                     <ul class="footer-list">
@@ -160,7 +294,7 @@
                     <h3 class="social-heading">
                         присоединяйтесь
                     </h3>
-                    <ul class="social-list">
+                    <ul class="social-list footer-social-list">
                         <li class="social-item">
                             <a href="" class="social-link">
                                 <svg class="footer-social-svg">
@@ -191,20 +325,21 @@
                         </li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="footer-form-section">
-                    <p class="footer-form-heading">Подпишитесь на рассылку</p>
-                    <form action="" class="footer-form">
-                        <input class="footer-form-input" type="email" placeholder="E-mail" name="user-email" required>
-                        <button type="submit" class="footer-subscribe">Подписаться
-                            <svg class="footer-send-icon">
-                                <use href="./img/svg/icons/symbol-defs.svg#icon-icon-send"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+            <div class="footer-form-section">
+                <p class="footer-form-heading">Подпишитесь на рассылку</p>
+                <form action="" class="footer-form">
+                    <input class="footer-form-input" type="email" placeholder="E-mail" name="user-email" required>
+                    <button type="submit" class="footer-subscribe">Подписаться
+                        <svg class="footer-send-icon">
+                            <use href="./img/svg/icons/symbol-defs.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
-    
+    <script src="./js/menu.js"></script>    
 </body>
 </html>

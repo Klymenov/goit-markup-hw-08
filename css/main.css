@@ -87,7 +87,11 @@ body {
 }
 
 .mobile-menu__container {
+  height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .visually-hidden {
@@ -114,12 +118,19 @@ body {
 .modal {
   padding: 40px;
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .close-modal {
@@ -166,10 +177,16 @@ body {
   margin: 0;
   font-weight: 600;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 30px;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-heading {
+    line-height: 23px;
+  }
 }
 
 .modal-label {
@@ -273,8 +290,8 @@ body {
 .modal-checkbox-label {
   display: flex;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: #757575;
   align-items: center;
@@ -295,6 +312,13 @@ body {
   background-image: url(../img/svg/icon_check.svg);
   background-position: center;
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-checkbox-label {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .modal-checkbox-link {
@@ -600,7 +624,6 @@ body {
 .mobile__nav-list {
   padding-top: 48px;
   padding-left: 40px;
-  margin-bottom: 302px;
 }
 
 .mobile__nav-element {
@@ -627,7 +650,6 @@ body {
 
 .mobile__contact-list {
   padding-left: 40px;
-  margin-bottom: 64px;
 }
 
 .mobile__contact-element {
@@ -856,7 +878,8 @@ body {
 }
 
 .accents-heading {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
@@ -865,6 +888,12 @@ body {
   color: #212121;
   margin: 0;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .accents-heading {
+    justify-content: start;
+  }
 }
 
 .accents-text {

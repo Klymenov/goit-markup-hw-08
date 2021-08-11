@@ -105,7 +105,9 @@
 }
 
 .accents-heading {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    // display: inline-block;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
@@ -114,6 +116,12 @@
     color: #212121;
     margin: 0;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .accents-heading{
+        justify-content: start;
+    }
 }
 .accents-text {
     font-weight: normal;
