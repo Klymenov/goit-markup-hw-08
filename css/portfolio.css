@@ -86,9 +86,13 @@
     }
   }
   
-  .mobile-menu__container {
-    position: relative;
-  }
+.mobile-menu__container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
   
   .visually-hidden {
     position: absolute !important;
